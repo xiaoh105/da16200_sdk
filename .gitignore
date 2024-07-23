@@ -1,0 +1,8 @@
+build/*
+.vscode/settings.json
+tools/util/__temp_img_path.txt
+img/*
+tools/build_error.log
+tools/SBOOT/image/*
+tools/version/genfiles/buildtime.h
+tools/version/genfiles/rtos_version_str.txt
