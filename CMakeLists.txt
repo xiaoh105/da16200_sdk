@@ -39,14 +39,14 @@ target_include_directories(${SDK_BOOT_IMG} PUBLIC ${MAIN_TARGET_INCLUDE})
 
 add_custom_target(post_build_da16200
     ALL
-    COMMAND ${SDK_ROOT}/tools/util/postbuild_start.sh ${SDK_ROOT}/tools dummy ${CMAKE_BINARY_DIR} ${MAIN_TARGET_NAME} DA16200
+    COMMAND ${SDK_ROOT}/cmake/helpers/run_custom_toolchain.sh ${TOOLCHAIN_BIN_PATH} ${SDK_ROOT}/tools/util/postbuild_start.sh ${SDK_ROOT}/tools dummy ${CMAKE_BINARY_DIR} ${MAIN_TARGET_NAME} DA16200
     VERBATIM
 )
 add_dependencies(post_build_da16200 ${MAIN_TARGET})
 
 add_custom_target(post_build_ueboot
     ALL
-    COMMAND ${SDK_ROOT}/tools/util/mk_boot_loader_image_start.sh ${SDK_ROOT}/tools dummy ${CMAKE_BINARY_DIR} ${MAIN_TARGET_NAME} ueboot
+    COMMAND ${SDK_ROOT}/cmake/helpers/run_custom_toolchain.sh ${TOOLCHAIN_BIN_PATH} ${SDK_ROOT}/tools/util/mk_boot_loader_image_start.sh ${SDK_ROOT}/tools dummy ${CMAKE_BINARY_DIR} ${MAIN_TARGET_NAME} ueboot
     VERBATIM
 )
 
