@@ -1,11 +1,12 @@
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR arm)
 
-if(NOT ARM_TOOLCHAIN_PATH)
+if(NOT TOOLCHAIN_PATH)
      set(TOOLCHAIN_PATH "/usr")
      message(STATUS "No TOOLCHAIN_PATH specified, using default: " ${TOOLCHAIN_PATH})
 else()
      file(TO_CMAKE_PATH "${TOOLCHAIN_PATH}" TOOLCHAIN_PATH)
+     message(STATUS "Setting toolchain to " ${TOOLCHAIN_PATH})
 endif()
 
 if(NOT TARGET_TRIPLET)
