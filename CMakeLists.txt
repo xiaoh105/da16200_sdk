@@ -35,7 +35,7 @@ endif (NOT DEFINED MAIN_TARGET_INCLUDE)
 include(main_app)
 include(bootloader)
 
-target_include_directories(${SDK_BOOT_IMG} PUBLIC ${MAIN_TARGET_INCLUDE})
+target_include_directories(${SDK_BOOT_IMG} BEFORE PUBLIC ${MAIN_TARGET_INCLUDE})
 
 add_custom_target(post_build_da16200
     ALL
