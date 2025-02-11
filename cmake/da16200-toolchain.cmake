@@ -43,7 +43,7 @@ add_compile_options(
     -ffunction-sections 
     -fdata-sections 
     -ffreestanding 
-    -fno-move-loop-invariants
+    # -fno-move-loop-invariants
     -Os
 )
 
@@ -60,7 +60,7 @@ add_link_options(
     -ffunction-sections 
     -fdata-sections 
     -ffreestanding 
-    -fno-move-loop-invariants
+    # -fno-move-loop-invariants
     -Os
     -Xlinker --gc-sections
 )

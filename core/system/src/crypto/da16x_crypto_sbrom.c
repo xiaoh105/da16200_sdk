@@ -99,7 +99,7 @@
 
 typedef unsigned int	size_t;
 typedef	unsigned char	uint8_t;
-typedef	unsigned long	uint32_t;
+typedef	__uint32_t	uint32_t;
 
 /******************************************************************************
  *

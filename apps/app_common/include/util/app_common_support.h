@@ -61,7 +61,7 @@ typedef struct _app_dpm_info_rtm {
  *
  * Enumeration structure for Sleep mode
  */
-typedef enum {
+typedef enum: UINT8 {
     SLEEP_MODE_NONE = 0,
     SLEEP_MODE_1,
     SLEEP_MODE_2,
