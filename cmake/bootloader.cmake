@@ -170,6 +170,13 @@ target_compile_definitions(${SDK_BOOT_IMG} PUBLIC
     ENABLE_AES_DRIVER=1
 )
 
+target_link_libraries(${SDK_BOOT_IMG} PUBLIC
+    cryptopkg
+    ${TOOLCHAIN_PATH}/arm-none-eabi/lib/arm/v5te/hard/libc.a
+    ${TOOLCHAIN_PATH}/lib/gcc/arm-none-eabi/10.3.1/arm/v5te/hard/libgcc.a
+    nosys
+)
+
 target_link_libraries(${SDK_BOOT_IMG} PUBLIC  "cryptopkg")
 
 target_link_directories(${SDK_BOOT_IMG} PUBLIC ${SDK_ROOT}/core/bsp/ldscripts)
